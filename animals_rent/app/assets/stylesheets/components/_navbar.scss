@@ -1,0 +1,57 @@
+.navbar-lewagon {
+  justify-content: space-between;
+  background-color: #2F2F2F;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: #B75A13 0px 2px 4px 0px, #B75A13 0px 2px 16px 0px;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+
+.beats-logo-title {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+
+  .rounded-circle{
+    // je suis un commentaire
+    margin-top: 10px;
+  }
+
+  h5 {
+    color: #f4f4f4;
+    font-weight: bold;
+    padding: 20px
+  }
+}
+
+.nav-link {
+  color: #f4f4f4;
+  padding-top: 5px;
+  &:hover {
+    font-weight: bold;
+    color: #f4f4f4;
+  }
+}
+
+.avatar {
+  margin-left: 10px;
+  border: 1px solid #f4f4f4
+
+}
+.dropdown-menu {
+  background-color: #2F2F2F;
+  .dropdown-item {
+    color: #f4f4f4
+  }
+
+}

@@ -1,0 +1,142 @@
+body {
+  color: #f4f4f4;
+
+}
+
+.container-animals {
+  margin-top: 70px;
+  background-color: #2F2F2F;
+  height: 100vh;
+}
+
+.animal-name {
+  margin-left: 5%;
+  padding-top: 2%;
+}
+.container_image_show {
+  display: flex;
+  align-items: flex-start;
+
+  .animal_info {
+    margin: 2% 5%;
+    flex: 2;
+  }
+  .image_show{
+    height: 350px;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: #B75A13 0px 2px 4px 0px, #B75A13 0px 2px 16px 0px;
+  }
+
+  .card-show-title {
+    margin-top: 20px;
+    margin-left: 15px;
+  }
+
+  .card-show {
+    flex: 1;
+    height: 350px;
+    margin: 2% 5%;
+    margin-bottom: 7%;
+    border-radius: 10px;
+    background-color: #2F2F2F;
+    box-shadow: #B75A13 0px 2px 4px 0px, #B75A13 0px 2px 16px 0px;
+    color: #f4f4f4;
+
+    .checkin {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      input {
+        background-color: #2F2F2F;
+        color: #f4f4f4
+      }
+      input[type="date"] {
+        background-color: #2F2F2F;
+        color: #f4f4f4
+      }
+
+      .button-animal-show {
+        border: 1px  solid #f4f4f4;
+        border-radius: 5px;
+        text-decoration: none;
+        padding: 10px 24px;
+        background-color: #2F2F2F;
+        color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 40px;
+
+        &:hover {
+          box-shadow: #B75A13 0px 2px 4px 0px, #B75A13 0px 2px 16px 0px;
+          border: 0px  solid #f4f4f4;
+        }
+
+      }
+    }
+  }
+}
+
+#new_booking {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.button_start_date, .button_end_date {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  margin-top: 20px;
+}
+
+.card-title-localisation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+
+  .card-text {
+
+    color:  #f4f4f4;
+  }
+}
+
+.capacity {
+  display: inline-block;
+
+  img {
+    height: 50px;
+    width: 50px;
+    border: 1px solid #f4f4f4;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-right: 15px;
+    color: #f4f4f4;
+    &:hover {
+      box-shadow: #B75A13 0px 2px 4px 0px, #B75A13 0px 2px 16px 0px;
+      border: 0px solid rgba(0,0,0,0.2);
+
+    }
+  }
+}
+
+#total-price-js {
+  color: #B75A13;
+  font-weight: bold;
+  font-size: 24px;
+  margin-top: 13px;
+  margin-right: 15px;
+}
+
+.card-show-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

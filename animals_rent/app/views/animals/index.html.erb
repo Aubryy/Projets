@@ -1,0 +1,53 @@
+<div class="main-animals-container">
+ <div class="row justify-content-center w-100">
+  <div class="col-sm-8 my-3">
+  <%= form_with url: animals_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+  params[:query],
+  class: "form-control",
+  placeholder: "Which animal are you looking for ?"
+  %>
+  <%= submit_tag "Search", name: "", class: "btn btn-pink" %>
+  <% end %>
+ </div>
+ </div>
+
+ <div class="animals-container">
+ <% if @animals.any? %>
+ <% @animals.each do |animal| %>
+ <div class="card-product">
+ <%= link_to animal_path(animal), class: "animal-image-link" do %>
+ <%= cl_image_tag animal.photo.key, width:300 %>
+ <div class="card-product-infos">
+ <div class='product-name-localisation'>
+ <%= animal.name %>
+ <p><%= animal.localisation %></p>
+ </div>
+ <div class='card-price-capacity'>
+ <h6 class="price">💰<%= animal.price_per_day.to_i %>$/day</h6>
+ <div class='beast-capacity'>
+ <% if animal.can_fly %>
+ <%= image_tag('can_fly_2.png') %>
+ <% end %>
+ <% if animal.can_walk %>
+ <%= image_tag('can_walk_2.png') %>
+ <% end %>
+ <% if animal.can_swim %>
+ <%= image_tag('can_swim_2.png') %>
+ <% end %>
+
+ </div>
+ </div>
+ <% end %>
+ </div>
+ </div>
+ <% end %>
+ <% else %>
+
+ <div class="text-center m-auto">
+ <em>Sorry, no animals found.</em>
+ </div>
+
+ <% end %>
+ </div>
+</div>

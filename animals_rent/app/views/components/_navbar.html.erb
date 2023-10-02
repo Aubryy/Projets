@@ -1,0 +1,50 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <div class='beats-logo-title'>
+      <a class="navbar-brand" href="/">
+        <%= image_tag 'Rent a beast_logo.png', class: 'rounded-circle'%>
+      </a>
+      <h5>Fantastics Beast</h5>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/animals/">Animals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/owner/animals/new/">Add a beast</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/bookings">Dashboard</a>
+          </li>
+          <% unless user_signed_in? %>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/sign_in">Log in</a>
+          </li>
+          <% end %>
+          <li class="nav-item dropdown">
+            <% if user_signed_in? %>
+              <% if current_user.avatar.present? %>
+                <%= image_tag current_user.avatar.url, class: "avatar dropdown-toggle", id: "navbarDropdown", "data-bs-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "false" %>
+              <% else %>
+                <%= image_tag 'users_icon.png', class: "avatar dropdown-toggle", id: "navbarDropdown", "data-bs-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "false" %>
+              <% end %>
+            <% end %>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <% if user_signed_in? %>
+                  <a class="dropdown-item" data-turbo-method="delete" href="/users/sign_out">Log out</a>
+                <% else %>
+                  <a class="dropdown-item" href="/users/sign_in">Login</a>
+                <% end %>
+              </div>
+          </li>
+          <!--li class="nav-item"-->
+          <!--/li-->
+      </ul>
+    </div>
+  </div>
+</div>
