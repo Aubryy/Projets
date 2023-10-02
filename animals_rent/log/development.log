@@ -1,0 +1,88 @@
+Started GET "/" for 127.0.0.1 at 2023-10-02 17:17:59 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered components/_banner.html.erb (Duration: 167.5ms | Allocations: 87486)
+  Rendered pages/home.html.erb within layouts/application (Duration: 168.6ms | Allocations: 88137)
+  Rendered layout layouts/application.html.erb (Duration: 168.6ms | Allocations: 88233)
+Completed 500 Internal Server Error in 185ms (ActiveRecord: 0.0ms | Allocations: 95961)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: bootstrap/scss/bootstrap.
+        on line 7:1 of app/assets/stylesheets/application.scss
+>> @import "bootstrap/scss/bootstrap";
+
+   ^
+):
+  
+app/assets/stylesheets/application.scss:7
+Started GET "/" for 127.0.0.1 at 2023-10-02 17:20:23 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered components/_btn-home.html.erb (Duration: 0.7ms | Allocations: 314)
+  Rendered components/_banner.html.erb (Duration: 3260.9ms | Allocations: 115046)
+  Rendered pages/home.html.erb within layouts/application (Duration: 3261.5ms | Allocations: 115569)
+  Rendered layout layouts/application.html.erb (Duration: 3267.9ms | Allocations: 127216)
+Completed 500 Internal Server Error in 3274ms (ActiveRecord: 0.0ms | Allocations: 131559)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8:     <script src="https://kit.fontawesome.com/9bb344ad6f.js" crossorigin="anonymous"></script>
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for 127.0.0.1 at 2023-10-02 17:22:21 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered components/_btn-home.html.erb (Duration: 0.5ms | Allocations: 309)
+  Rendered components/_banner.html.erb (Duration: 1.0ms | Allocations: 710)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1233)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 219)
+  Rendered components/_footer.html.erb (Duration: 0.1ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2833)
+Completed 200 OK in 11ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 7218)
+
+
+Started GET "/animals" for 127.0.0.1 at 2023-10-02 17:23:57 +0200
+Processing by AnimalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering animals/index.html.erb within layouts/application
+  [1m[36mAnimal Exists? (6.5ms)[0m  [1m[34mSELECT 1 AS one FROM "animals" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/animals/index.html.erb:16
+  [1m[36mAnimal Load (0.6ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/views/animals/index.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (2.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 17], ["record_type", "Animal"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/animals/index.html.erb:20
+  [1m[36mActiveStorage::Blob Load (4.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/animals/index.html.erb:20
+  Rendered animals/index.html.erb within layouts/application (Duration: 139.0ms | Allocations: 45763)
+  Rendered layout layouts/application.html.erb (Duration: 139.1ms | Allocations: 45861)
+Completed 500 Internal Server Error in 148ms (ActiveRecord: 62.1ms | Allocations: 49026)
+
+
+  
+ActionView::Template::Error (Must supply cloud_name in tag or in configuration):
+    17:  <% @animals.each do |animal| %>
+    18:  <div class="card-product">
+    19:  <%= link_to animal_path(animal), class: "animal-image-link" do %>
+    20:  <%= cl_image_tag animal.photo.key, width:300 %>
+    21:  <div class="card-product-infos">
+    22:  <div class='product-name-localisation'>
+    23:  <%= animal.name %>
+  
+app/views/animals/index.html.erb:20
+app/views/animals/index.html.erb:19
+app/views/animals/index.html.erb:17
