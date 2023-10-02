@@ -1,0 +1,201 @@
+
+{
+  "background_color": "white",
+  "description": "Fit Mate est l'application de rencontre sportive pour tous. Adapté à votre niveau et axé avant tout sur des évênements sportifs permettant de rencontrer de nouvelles personnes.
+",
+  "display": "fullscreen",
+  "name": "Fit Mate",
+  "icons": [
+    
+    
+      
+      {
+        "src": "/assets/icons/favicon-16x16-e89bb2c50e7e3a1d1c31055f18581280ffa8867717d6d334bd55b79a0ad8d74f.png",
+        "sizes": "16x16",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/favicon-953faee53250c7f866393e8848f4db90b9f5c4a41f496329cada3e5acf75bc79.ico",
+        "sizes": "",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/apple-icon-8053c3c1a2fddfbea987d1c13fcd0e32e19bf8b6e029af418f8a18a878f1ef75.png",
+        "sizes": "",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/apple-icon-144x144-1a23794cf3a878d3e2eb505c546a72acecb83cfebf02dbe357622d5c02114f8b.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/android-icon-192x192-3071d696200cb2658fae8f469d35cb7b1c62715abed1129e3d8244a94464128e.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/apple-icon-precomposed-8053c3c1a2fddfbea987d1c13fcd0e32e19bf8b6e029af418f8a18a878f1ef75.png",
+        "sizes": "",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/apple-icon-114x114-8a6bb6010991f23431215d9ec48648935119d2e3054648e9e06e20709adcf8d1.png",
+        "sizes": "114x114",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/ms-icon-310x310-0997c1ef9797efb1c4c146e2e32a10382d9d2a1ef7257cddd2af13cd48a17ea4.png",
+        "sizes": "310x310",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/ms-icon-144x144-b33802848aa9c4825b37781559d2ff079817577f9e54ab496c475469381a95bb.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/apple-icon-57x57-7aa59fad89b44c696d2088d78e282adc7e074811fa28c6d23699dd4ff2379cd4.png",
+        "sizes": "57x57",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/apple-icon-152x152-381ed99baf14af18fad26c96a2fe186a7e1073741cbf16600a3fa0536243918a.png",
+        "sizes": "152x152",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/ms-icon-150x150-ad392022731efc979776a037d65f273966be4ea8404b1fc52b964472b1ac03ae.png",
+        "sizes": "150x150",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/android-icon-72x72-75a4d3fde2b7973a5c3b54c433ab4aa75c33ffba6ec52bb278f8503bd89fa448.png",
+        "sizes": "72x72",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/android-icon-96x96-6c85bfc27e538fd79918f9929e3fc5fcffc0f335a49aed5e1308fcd4ac8d683d.png",
+        "sizes": "96x96",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/android-icon-36x36-a4a64258c50767b59142632d79e99a90789ac026b061eabacf5613c57484b591.png",
+        "sizes": "36x36",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/apple-icon-180x180-68a11fe6c80b078a7e4dfaed41d9d5d2ac947ddec8f933136d59515697b45e63.png",
+        "sizes": "180x180",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/favicon-96x96-cfe474223e6799fedea7e7b1f059f2634d6e11469f32440c0051139afd224832.png",
+        "sizes": "96x96",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/manifest-2023f62e376578fede4ef5a66f83d89f6fa77f2a948ceb10c95d91c2fdaf567e.json",
+        "sizes": "",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/android-icon-48x48-d4978d91efb88344831bf980c49b384da07d796f1ba8b879922dc7829ba95cfb.png",
+        "sizes": "48x48",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/apple-icon-76x76-5e1a62bf8d184a9aa9d76ee9c9381375d06b4831bd910eb9e7f5be73518b7312.png",
+        "sizes": "76x76",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/apple-icon-60x60-e0d73915ef915be938dd785cbb9fd4ab30eb0bc400fb3138329c6874852dfed2.png",
+        "sizes": "60x60",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/browserconfig-e945509961c659e593426a774e53e471edc3726876e4db032f3ae4f4b245c2c8.xml",
+        "sizes": "",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/android-icon-144x144-1a23794cf3a878d3e2eb505c546a72acecb83cfebf02dbe357622d5c02114f8b.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/apple-icon-72x72-75a4d3fde2b7973a5c3b54c433ab4aa75c33ffba6ec52bb278f8503bd89fa448.png",
+        "sizes": "72x72",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/apple-icon-120x120-fb197c14a28bfd7dfc904577d6a2f60d8e8695959c5b0ef826331e42486a0a5c.png",
+        "sizes": "120x120",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/favicon-32x32-1a019e969dd3e28ea5f2be96b0823d6b0f5c69482eed183e4658c0b985308c2b.png",
+        "sizes": "32x32",
+        "type": "image/png"
+      },
+    
+      
+      {
+        "src": "/assets/icons/ms-icon-70x70-5240d2a4dde179d1bb1832e16580692da23a2592ad2cf25dec323bcc78fbc7d4.png",
+        "sizes": "70x70",
+        "type": "image/png"
+      }
+    
+  ]
+}

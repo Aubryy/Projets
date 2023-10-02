@@ -1,0 +1,21 @@
+{:uriI"áfile://app/assets/builds/application.js.LICENSE.txt?type=text/plain&id=9c7e61706714d95fece4eebd8ecad11c17d68d73a6ced6917ad9cde1ab116113:ET:load_pathI"app/assets/builds;T:filenameI"1app/assets/builds/application.js.LICENSE.txt;T:	nameI"application.js.LICENSE;T:logical_pathI"application.js.LICENSE.txt;T:content_typeI"text/plain;T:sourceI"4/*!
+  * Bootstrap v5.3.0 (https://getbootstrap.com/)
+  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+  */
+
+/*! http://mths.be/base64 v0.1.0 by @mathias | MIT license */
+
+/**! 
+ * hotkeys-js v3.10.2 
+ * A simple micro-library for defining and dispatching keyboard shortcuts. It has no dependencies. 
+ * 
+ * Copyright (c) 2023 kenny wong <wowohoo@qq.com> 
+ * http://jaywcjlove.github.io/hotkeys 
+ * Licensed under the MIT license 
+ */
+;T:metadata{
+:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"4processors:type=text/plain&file_type=text/plain;TTI"?file-digest://app/assets/builds/application.js.LICENSE.txt;TTF:charsetI"
+utf-8;F:digest"%Ù2˚ﬂ∏ﬂn>ú§ˇdÉl"∆3.$IJæ∏#VmÅê:lengthi4:environment_versionI"1.0;T:dependencies_digest"%ˇm~»Û#v«QŸ≠àöà◊ÄÖ∑bKª‰Î‰ÕÂ6:idI"E9c7e61706714d95fece4eebd8ecad11c17d68d73a6ced6917ad9cde1ab116113;F

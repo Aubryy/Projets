@@ -1,0 +1,67 @@
+Started GET "/" for 127.0.0.1 at 2023-10-02 17:36:19 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 260.0ms | Allocations: 126815)
+  Rendered layout layouts/application.html.erb (Duration: 260.1ms | Allocations: 126925)
+Completed 500 Internal Server Error in 275ms (ActiveRecord: 0.0ms | Allocations: 134645)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: bootstrap/scss/bootstrap.
+        on line 7:1 of app/assets/stylesheets/application.scss
+>> @import "bootstrap/scss/bootstrap";
+
+   ^
+):
+  
+app/assets/stylesheets/application.scss:7
+Started GET "/" for 127.0.0.1 at 2023-10-02 17:36:52 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3601.8ms | Allocations: 185348)
+  Rendered layout layouts/application.html.erb (Duration: 3609.5ms | Allocations: 198863)
+Completed 500 Internal Server Error in 3616ms (ActiveRecord: 0.0ms | Allocations: 203201)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     8:     <title><%= meta_title %></title>
+     9:     <meta name="description" content="<%= meta_description %>">
+    10:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    11:     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    12:     <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+    13:     <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+    14:     <!-- Facebook Open Graph data -->
+  
+app/views/layouts/application.html.erb:11
+Started GET "/" for 127.0.0.1 at 2023-10-02 17:38:10 +0200
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 8.4ms | Allocations: 5191)
+  Rendered shared/_ios_pwa_links.html.erb (Duration: 4.4ms | Allocations: 5775)
+  Rendered layout layouts/application.html.erb (Duration: 62.9ms | Allocations: 75394)
+Completed 200 OK in 64ms (Views: 63.7ms | ActiveRecord: 0.0ms | Allocations: 75722)
+
+
+Started GET "/events" for 127.0.0.1 at 2023-10-02 17:38:13 +0200
+Processing by EventsController#index as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms | Allocations: 1833)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-10-02 17:38:13 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 732)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 33.0ms | Allocations: 16000)
+  Rendered shared/_ios_pwa_links.html.erb (Duration: 1.8ms | Allocations: 5475)
+  Rendered layout layouts/application.html.erb (Duration: 41.9ms | Allocations: 37324)
+Completed 200 OK in 90ms (Views: 43.2ms | ActiveRecord: 33.9ms | Allocations: 49005)
+
+
