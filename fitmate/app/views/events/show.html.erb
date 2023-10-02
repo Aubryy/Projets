@@ -1,0 +1,139 @@
+<% content_for :meta_title, "#{@event.title} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @event.description %>
+<% content_for :meta_image, cl_image_path(@event.photo.key) if @event.photo.attached? %>
+
+<div class="fitmate-container-show page-container">
+  <div class="link-title">
+    <%= link_to events_path do %>
+      <div class="fitmate-header-navbar">
+        <button class='transparent-button'>
+          <i class="fa-solid fa-chevron-left" style="color: #f6d0a5;"></i>
+        </button>
+      </div>
+    <% end %>
+
+    <%# TITLE %>
+      <div class="show-title">
+        <h1><%= @event.title %></h1>
+        <h6><%= @event.localisation.split(" ").last %></h6>
+      </div>
+  </div>
+
+  <div class="show-header">
+    <div class="show-image">
+      <%= cl_image_tag @event.photo.key, class:'image-event' %>
+    </div>
+
+    <div class="details-events">
+
+      <div class="show-distance">
+        <div><% wagon_coordinates = [47.21112643898949, -1.5500990500139393] %></div>
+        <div><%= image_tag("place_small_card.png", class: "icon-map") %></div>
+        <div> à <%= Geocoder::Calculations.distance_between(wagon_coordinates,[@event.latitude,@event.longitude]).round(2).to_s %> km de votre position</div>
+      </div>
+
+      <div class="show-duration-level">
+        <div><%= image_tag("#{@event.event_level}.svg", class: "pictogram-levels") %></div>
+        <div> <%= @event.event_level %></div>
+      </div>
+    </div>
+
+    <div class="show-description">
+      <%= @event.description %>
+    </div>
+
+      <div class="show-participant">
+        <p><%= @event.event_participants.participe.size + 1 %> / <%= @event.max_participant %> potes sont de la partie</p>
+        <%= cl_image_tag @organizer.photo.key, class:"organizer-img" %>
+        <% if @event.organizer.username == "alexia25" || @event.organizer.username == "SarahD" || @event.organizer.username == "LeaR" %>
+          <%= @event.organizer.username %> - Organisatrice
+        <% else %>
+          <%= @event.organizer.username %> - Organisateur
+        <% end %>
+        <% @event.event_participants.participe.each do |event_participant| %>
+          <div class="show-each-participant">
+            <%= cl_image_tag event_participant.user.photo.key, class: 'organizer-img' %>
+            <%= event_participant.user.username %>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="btn-message-interested d-flex justify-content-center mt-3">
+        <button class= "btn-message">
+          <%= link_to "Message", event_chatbox_path(@event) %>
+          <%= image_tag('icon-message.svg') %>
+        </button>
+
+        <div class="dropdown dropup">
+          <button class="btn btn-secondary dropdown-toggle btn-interested" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+            Intéressé?
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-right dropdown-al" aria-labelledby="dropdownMenuButton2">
+            <%# 1 - SI LE PARTICIPANT EST DEJA INSCRIT %>
+            <% if EventParticipant.exists?(user_id: current_user, event_id: @event.id, status: "participe") %>
+
+              <li><%= button_to "Inscrit ✔️", "#", class: "btn-du-dropdown" %></li>
+
+              <li>
+                <button type="button" class="btn-du-dropdown" data-bs-toggle="modal" data-bs-target="#annuleModal">
+                  Annuler?
+                </button>
+              </li>
+
+            <%# 2 - SI LE PARTICIPANT EST DEJA INTERESSE %>
+
+            <% elsif EventParticipant.exists?(user_id: current_user, event_id: @event.id, status: "intéressé")%>
+
+              <li><%= button_to "Intéressé ✔️", "#", class: "btn-du-dropdown"%></li>
+
+              <li>
+                <button type="button" class="btn-du-dropdown" data-bs-toggle="modal" data-bs-target="#annuleModal">
+                  Plus intéressé?
+                </button>
+              </li>
+
+            <%# 3 - SI LE CURRENT_USER EST L'ORGANISATEUR %>
+
+            <% elsif @organizer.id == current_user.id %>
+              <li><%= button_to "Organisateur ✔️", "#", class: "btn-du-dropdown"%></li>
+
+            <%# 4 - SI LE PARTICIPANT N'A PAS ENCORE REAGI %>
+            <% else %>
+              <li>
+                <button type="button" class="btn-du-dropdown" data-bs-toggle="modal" data-bs-target="#participeModal">
+                  Je participe!
+                </button>
+
+              </li>
+                <button type="button" class="btn-du-dropdown" data-bs-toggle="modal" data-bs-target="#interesseModal">
+                  Ca m'intéresse
+                </button>
+              </li>
+            <% end %>
+          </ul>
+          <%= render partial: "shared/participe_modal" %>
+          <%= render partial: "shared/annule_modal" %>
+          <%= render partial: "shared/interesse_modal" %>
+        </div>
+      </div>
+
+      <h5 class= "show-info-list-club">Vous voulez rencontrer plus de potes ?</h5>
+      <p class="show-info-list-club-paraf"><em>Voici une liste des clubs à proximité </em></p>
+        <div class="btn-group dropup mt-3 dropdown-list-club">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+            Liste des clubs
+          </button>
+          <ul class="dropdown-menu dropdown-menu-lg-end w-100">
+            <% Sport::LIST_CLUB.each do |club| %>
+              <li>
+                <div class="show-list-club">
+                  <div class="show-list-club-name"><strong><%= club["name"].upcase %></strong></div>
+                  <div class="show-list-club-locality"><%= club["localisation"].capitalize %></div>
+                </div>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+    </div>
+  </div>
+</div>

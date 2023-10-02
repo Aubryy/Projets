@@ -1,0 +1,155 @@
+.fitmate-container {
+  background-color: #4B4B4B;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.fitmate-title {
+  font-family: 'Permanent Marker', cursive;
+  color: #F6D0A5;
+  font-size: 42px;
+  text-align: center;
+  padding-bottom: 1vh;
+  height: 73px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.inside-form-container {
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.formpasselect{
+
+
+}
+
+
+
+// label "filtres:"
+.filter-form .form-label {
+  display: none;
+}
+.form-label {
+  color: #F6D0A5;
+  margin-right: 2vh;
+}
+
+// menu déroulant "all sports"
+.formpasselect #query {
+  background-color: #4B4B4B;
+  color: whitesmoke;
+  border-radius: 8px;
+  padding-right: 1px;
+  padding-left: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 195px;
+}
+
+
+
+// bouton "go!"
+.form-submit {
+  color: #4B4B4B;
+  padding: 5px 10px;
+  border-radius: 25px 0px 25px 25px;
+  font-weight: bold;
+  background-color: #F6D0A5;
+  border: none;
+  margin-left: 2vh;
+}
+
+.form-submit:hover {
+  background-color: #D1946F;
+}
+
+.localisation-button{
+  position: absolute;
+  right: -1px;
+  top: -180px;
+  padding: 0;
+}
+
+
+.button-create {
+  position: absolute;
+  right: 0;
+  top: -100px;
+  margin-right: 20px;
+}
+
+.filter-cta {
+  position: absolute;
+  top: 83px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+}
+
+.filter-cta img {
+  width: 100%;
+  height: 100%;
+}
+
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl {
+  width: 335px;
+}
+
+.filter-form form {
+  width: 370px;
+  position: absolute;
+  inset: 0;
+  top: 60px;
+  margin: auto;
+}
+
+.move-up {
+  transform: translateY(-100px);
+}
+
+#map {
+  width: 100%;
+  flex: 1;
+}
+
+.image-profil-corner {
+  height: 50px;
+  width: 50px;
+  border: 1px solid #F6D0A5;
+  border-radius: 25px 0px 25px 25px;
+  position: absolute;
+  right: 18px;
+  top: 11px;
+  }
+
+
+//
+/* Quand suggestions de lieux
++ s'affiche "no results found */
+.mapboxgl-ctrl-geocoder .suggestions {
+  /* Ajoutez vos styles personnalisés ici */
+  // background-color: yellow;
+  // background-color: #4B4B4B;
+  // color: whitesmoke;
+}
+
+.mapboxgl-ctrl-geocoder--suggestion {
+  // background-color: aqua;
+  // background-color: #4B4B4B;
+  // color: whitesmoke;
+}
+
+.hidden {
+  display: none;
+}

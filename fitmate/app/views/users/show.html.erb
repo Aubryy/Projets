@@ -1,0 +1,105 @@
+<%# USER_PROFIL %>
+<div class="big-container-user page-container">
+  <%# LINK-TITLE %>
+  <div class="link-title-profil">
+    <%= link_to events_path do %>
+      <div class="fitmate-header-navbar">
+        <button class='transparent-button'>
+          <i class="fa-solid fa-chevron-left" style="color: #f6d0a5;"></i>
+        </button>
+      </div>
+    <% end %>
+
+    <%# TITLE %>
+    <div class="show-title-user">
+      <h3>Profil</h3>
+    </div>
+
+    <%# IMAGE-USER-CORNER %>
+      <%# div vide pour que profil soit centré %>
+    <div class="image-user-corner">
+    </div>
+  </div>
+
+  <%# IMAGE-PROFIL-CENTER & USERNAME %>
+  <div class="image-profil-username">
+    <%# IMAGE-PROFIL-CENTER %>
+    <div class="image-profil-center">
+      <%= cl_image_tag @current_user.photo.key, class:'image-profil' %>
+    </div>
+
+    <%# USERNAME %>
+    <div class="username">
+      <%= @user.username %>
+    </div>
+  </div>
+
+  <%# SHOW-DISTANCE-USER & LEVEL %>
+  <div class="show-distance-user-level">
+    <%# SHOW-DISTANCE-USER %>
+    <div class="show-distance-user">
+      <%= image_tag("localisation-pin.svg", class: "pictogram-localisation") %>
+      <%= wagon_coordinates = "Nantes" %>
+    </div>
+
+    <%# LEVEL %>
+    <div class="level-user">
+      <%= image_tag("#{@current_user.sport_level}.svg", class: "pictogram-levels") %>
+      <%= @current_user.sport_level %>
+    </div>
+  </div>
+
+  <%# DESCRIPTION %>
+  <div class="description-user">
+    <h6>Description</h6>
+      <%= @current_user.description.capitalize %>
+  </div>
+
+  <%# FAVORITE-SPORT %>
+  <div class="favorite-sport">
+    <h6 class="favorite-sport-title">Sport favori</h6>
+      <button class="btn-favorite-sport">
+        <a href="/events?query=<%= @current_user.favorite_sport %>"><%= @current_user.favorite_sport.capitalize %></a>
+      </button>
+  </div>
+
+  <div class="container-orga-interest">
+    <%# EVENEMENT CREER PAR LE USER %>
+    <div class="event-create-user">
+      <h6>Organise</h6>
+        <% @organizer.each do |event| %>
+          <li>
+            <div><strong><%= event.title %></strong></div>
+            <div><em><%= event.datetime.strftime("%d/%m/%Y") %></em></div>
+          </li>
+        <% end %>
+    </div>
+      <%# EVENEMENT AUQUEL EST INTERESSE LE USER %>
+    <div class="event-interested-user">
+      <h6>Interessé</h6>
+        <% @interested.each do |interested|%>
+          <li>
+            <div><a href="/events/258"><strong><%= interested.event.title %></strong></a></div>
+            <div><em><%= interested.event.datetime.strftime("%d/%m/%Y") %></em></div>
+          </li>
+        <% end %>
+    </div>
+  </div>
+
+  <%# EVENEMENT AUQUEL PARTICIPE LE USER %>
+  <div class="event-particip-user">
+    <h6>Participe</h6>
+      <% @events.each do |event_participant|%>
+        <li>
+          <div><strong><%= event_participant.event.title %></strong></div>
+          <div><em><%= event_participant.event.datetime.strftime("%d/%m/%Y") %></em></div>
+        </li>
+      <% end %>
+  </div>
+<%# Lot out %>
+  <div class="log-out-session">
+    <div class="link-log-out-session">
+      <%= link_to 'Deconnexion' %>
+    </div>
+  </div>
+</div>

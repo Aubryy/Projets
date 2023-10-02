@@ -1,0 +1,5 @@
+<h2><%= event.title %></h2>
+<p><%= event.localisation %></p>
+<div>Details</div>
+<p><%= event.sport %></p>
+<p>Organized by <%= User.find(event.organizer_id).username %></p>
